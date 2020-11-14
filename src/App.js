@@ -1,7 +1,7 @@
 import React from 'react';
-import ListComponent from './ListComponent';
+import ListComponent from './components/ListComponent';
 import {v4 as uuid} from 'uuid';
-import logo from './logo.svg';
+import logo from './todo-icon.jpg';
 import './App.css';
 
 
@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   deleteTodo = (id) => {
-    console.log('DELETED');
+    console.log(`${id} was DELETED`);
     const updatedTodos = this.state.todos.filter(todo => todo.id !== id);
     this.setState({
       todos: updatedTodos,
@@ -49,7 +49,7 @@ class App extends React.Component {
           <h1>To Do List</h1>
           <form onSubmit={this.addTodo}>
             <input value={this.state.text} onChange={this.inputText}></input>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </form>
           <ListComponent todos={this.state.todos} deleteTodo={this.deleteTodo}/>
         </header>
