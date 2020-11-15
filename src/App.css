@@ -17,6 +17,13 @@
   color: #282c34;
 }
 
-button {
-  margin-left: 15px;
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-name {
+  margin-bottom: 10px;
+  padding: 5px;
 }

@@ -49,7 +49,7 @@ class App extends React.Component {
           <h1>To Do List</h1>
           <form onSubmit={this.addTodo}>
             <input value={this.state.text} onChange={this.inputText}></input>
-            <button type="submit">Submit</button>
+            <button type="submit">Add</button>
           </form>
           <ListComponent todos={this.state.todos} deleteTodo={this.deleteTodo}/>
         </header>
